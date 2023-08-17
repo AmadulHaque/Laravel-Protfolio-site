@@ -54,7 +54,7 @@ $setting =DB::table('settings')->first();
           <div class="border p-3 rounded mt-4">
             <h2 class="text-center">About </h2>
             <div class="mb-3">
-              <label class="form-label">Education Title </label>
+              <label class="form-label">About Title </label>
               <input type="text" class="form-control" name="a_title" value="{{$setting->a_title}}">
             </div>
             <hr>
@@ -70,7 +70,21 @@ $setting =DB::table('settings')->first();
             </div>
           </div>
           
-
+          <div class="border p-3 rounded mt-4">
+            <h2 class="text-center">Portfolio </h2>
+            <div class="mb-3">
+              <label class="form-label">Portfolio Title </label>
+              <input type="text" class="form-control" name="p_title" value="{{$setting->p_title}}">
+            </div>
+            <hr>
+            <div class="mb-3">
+              <label class="form-label">Portfolio Description</label>
+              <textarea name="p_desc" class="form-control" >
+                {{$setting->p_desc}}
+              </textarea>
+            </div>
+          </div>
+          
 
 
 

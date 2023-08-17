@@ -16,8 +16,10 @@ class HomeController extends Controller
         $skillF =  DB::table('skills')->where('status',1)->get();
         $skillB =  DB::table('skills')->where('status',2)->get();
         $about =  DB::table('abouts')->first();
+        $port_types =  DB::table('port_types')->where('status',1)->get();
+        $portfolios =  DB::table('portfolios')->where('status',1)->get();
 
-        $compact = compact('setting','hero','service','skillF','skillB','about'); 
+        $compact = compact('portfolios','port_types','setting','hero','service','skillF','skillB','about'); 
         return view('frontend.master',$compact); 
     }
     

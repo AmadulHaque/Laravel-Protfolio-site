@@ -63,6 +63,22 @@
 				</li>
 
 				
+				<!--Manage  Portfolio  -->
+				<li>
+					<a href="javascript:;" class="has-arrow">
+						<div class="parent-icon"><i class="fadeIn animated bx bx-user-check"></i>
+						</div>
+						<div class="menu-title"> Manage Portfolio</div>
+					</a>
+					<ul>
+						<li> <a href="{{route('PortfolioAdd')}}"><i class="bx bx-right-arrow-alt"></i>Add Portfolio</a></li>
+						<li> <a href="{{route('Portfolio')}}"><i class="bx bx-right-arrow-alt"></i>Portfolio List</a></li>
+						<li> <a href="{{route('PortfolioTypeAdd')}}"><i class="bx bx-right-arrow-alt"></i>Add Portfolio Type</a></li>
+						<li> <a href="{{route('PortfolioType')}}"><i class="bx bx-right-arrow-alt"></i>Portfolio Type List</a></li>
+					</ul>
+				</li>
+
+				
 
 				<!--Manage Setting  -->
 				<li>
@@ -72,6 +88,7 @@
 						<div class="menu-title">Manage Setting</div>
 					</a>
 					<ul>
+						<li> <a href="{{route('Contact')}}"><i class="bx bx-right-arrow-alt"></i>Contact List</a></li>
 						<li> <a href="{{route('GetSetting')}}"><i class="bx bx-right-arrow-alt"></i>All Settings</a></li>
 					</ul>
 				</li>

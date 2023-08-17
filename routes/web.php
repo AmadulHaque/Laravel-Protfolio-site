@@ -6,6 +6,8 @@ use App\Http\Controllers\HeroController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\SkillController;
+use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\ContactController;
 
 // front
 use App\Http\Controllers\Front\HomeController;
@@ -51,7 +53,31 @@ Route::middleware('auth')->group(function(){
   Route::post('/skill/add', [SkillController::class, 'SkillPost'])->name('SkillPost');
   Route::post('/skill/update', [SkillController::class, 'SkillUpdate'])->name('SkillUpdate');
 
-  
+
+
+  // Portfolio 
+  Route::get('/portfolio-type', [PortfolioController::class, 'PortfolioType'])->name('PortfolioType');
+  Route::get('/portfolio-type/add', [PortfolioController::class, 'PortfolioTypeAdd'])->name('PortfolioTypeAdd');
+  Route::get('/portfolio-type/edit/{id}', [PortfolioController::class, 'PortfolioTypeEdit'])->name('PortfolioTypeEdit');
+  Route::get('/portfolio-type/delete/{id}', [PortfolioController::class, 'PortfolioTypeDelete'])->name('PortfolioTypeDelete');
+  Route::post('/portfolio-type/add', [PortfolioController::class, 'PortfolioTypePost'])->name('PortfolioTypePost');
+  Route::post('/portfolio-type/update', [PortfolioController::class, 'PortfolioTypeUpdate'])->name('PortfolioTypeUpdate');
+
+  // Portfolio 
+  Route::get('/portfolio', [PortfolioController::class, 'Portfolio'])->name('Portfolio');
+  Route::get('/portfolio/add', [PortfolioController::class, 'PortfolioAdd'])->name('PortfolioAdd');
+  Route::get('/portfolio/edit/{id}', [PortfolioController::class, 'PortfolioEdit'])->name('PortfolioEdit');
+  Route::get('/portfolio/details/{id}', [PortfolioController::class, 'PortfolioDetails'])->name('PortfolioDetails');
+  Route::get('/portfolio/delete/{id}', [PortfolioController::class, 'PortfolioDelete'])->name('PortfolioDelete');
+  Route::post('/portfolio/add', [PortfolioController::class, 'PortfolioPost'])->name('PortfolioPost');
+  Route::post('/portfolio/update', [PortfolioController::class, 'PortfolioUpdate'])->name('PortfolioUpdate');
+
+  // skill
+  Route::get('/contact', [ContactController::class, 'Contact'])->name('Contact');
+  Route::get('/contact/delete/{id}', [ContactController::class, 'ContactDelete'])->name('ContactDelete');
+  Route::get('/contact/approve/{id}', [ContactController::class, 'ContactApprove'])->name('ContactApprove');
+  Route::get('/contact/reject/{id}', [ContactController::class, 'ContactReject'])->name('ContactReject');
+
 
   // settings All Route
 Route::controller(HeroController::class)->group(function () {
@@ -79,6 +105,7 @@ Route::controller(DefaultController::class)->group(function () {
 
 
 
+Route::post('/contact/add', [ContactController::class, 'ContactPost'])->name('ContactPost');
 // front controller
 Route::controller(HomeController::class)->group(function () {
   Route::get('/', 'Home')->name('Home');

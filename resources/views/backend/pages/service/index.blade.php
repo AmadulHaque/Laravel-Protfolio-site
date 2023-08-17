@@ -55,7 +55,6 @@
 @push('js')
 
 	<!--plugins-->
-	<script src="{{ asset('backend/assets/js/jquery.min.js') }}"></script>
 	<script src="{{ asset('backend/assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
 	<script src="{{ asset('backend/assets/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
 

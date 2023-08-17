@@ -58,6 +58,8 @@ class SettingController extends Controller
         $data['a_title'] = $request->a_title;
         $data['sk_title'] = $request->sk_title;
         $data['sk_desc'] = $request->sk_desc;
+        $data['p_title'] = $request->p_title;
+        $data['p_desc'] = $request->p_desc;
         DB::table('settings')->update($data);
         $notification = array('message' => 'Update Success!','alert-type' => 'success');
         return redirect()->back()->with($notification);

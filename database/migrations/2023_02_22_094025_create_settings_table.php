@@ -25,6 +25,8 @@ return new class extends Migration
             $table->string('a_title')->nullable();
             $table->string('sk_title')->nullable();
             $table->string('sk_desc')->nullable();
+            $table->string('p_title')->nullable();
+            $table->string('p_desc')->nullable();
             $table->timestamps();
         });
     }
